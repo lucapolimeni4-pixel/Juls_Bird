@@ -1,0 +1,130 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    width: min(100%, 1000px);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(18px, 4vw, 28px);
+    margin: 0;
+}
+
+.hud {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background: #ffd54a;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+.game-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid #555;
+    border-radius: 12px;
+    background: #d8c4a0;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    touch-action: none;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    background: rgb(0 0 0 / 65%);
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay h2 {
+    font-size: clamp(24px, 5vw, 42px);
+    margin: 0 0 12px;
+}
+
+.overlay p {
+    max-width: 420px;
+    line-height: 1.5;
+    margin: 0 0 22px;
+}
+
+#start-button {
+    font-size: 16px;
+    min-width: 150px;
+}
+
+.instructions {
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .game-header {
+        flex-wrap: wrap;
+    }
+
+    .hud {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    canvas {
+        aspect-ratio: 16 / 9;
+    }
+}

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trucho Birds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-container">
+        <header class="game-header">
+            <h1>gonna get to you girl</h1>
+            <div class="hud">
+                <span id="progress">0%</span>
+                <button id="music-button" type="button">♫ Música: ON</button>
+            </div>
+        </header>
+
+        <div class="game-wrapper">
+            <canvas id="game"></canvas>
+
+            <section id="overlay" class="overlay">
+                <h2 id="overlay-title">Trucho Birds</h2>
+                <p id="overlay-message">
+                    Te amo
+                </p>
+                <button id="start-button" type="button">EMPEZAR</button>
+            </section>
+        </div>
+
+        <p class="instructions">
+            click en la pantalla para flotar
+        </p>
+    </main>
+
+    <audio id="background-music" src="music/musica.mp3" loop preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
